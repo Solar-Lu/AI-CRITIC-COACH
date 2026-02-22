@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  :root {
+    --bg-color: #E6E6E6;
+    --card-bg: #151619;
+    --text-primary: #FFFFFF;
+    --text-secondary: #8E9299;
+    --accent: #FF4444;
+  }
+
+  body {
+    @apply bg-[var(--bg-color)] text-gray-900 font-sans;
+  }
+}
+
+@layer components {
+  .widget-container {
+    @apply bg-[var(--card-bg)] rounded-2xl shadow-2xl border border-white/5 overflow-hidden;
+  }
+
+  .radial-track {
+    @apply border border-dashed border-[var(--text-secondary)] rounded-full;
+  }
+
+  .status-label {
+    @apply font-mono text-[10px] tracking-widest uppercase text-[var(--text-secondary)];
+  }
+
+  .timer-display {
+    @apply font-mono text-xs tracking-wider text-[var(--text-primary)];
+  }
+
+  .data-row {
+    @apply grid grid-cols-[40px_1.5fr_1fr_1fr] p-4 border-b border-black/5 transition-colors cursor-pointer hover:bg-black hover:text-white;
+  }
+
+  .col-header {
+    @apply font-serif italic text-[11px] opacity-50 uppercase tracking-wider;
+  }
+
+  .data-value {
+    @apply font-mono tracking-tighter;
+  }
+}
+
+.is-recording .trigger-icon {
+  @apply bg-[var(--accent)] shadow-[0_0_15px_rgba(255,68,68,0.4)];
+}
+
+.glass-panel {
+  @apply bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl;
+}
+

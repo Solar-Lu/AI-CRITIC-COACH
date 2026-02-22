@@ -1,0 +1,5 @@
+{
+  "name": "AI Critic Coach",
+  "description": "High-pressure AI oral practice system for simulating workplace criticism and conflict resolution.",
+  "requestFramePermissions": ["microphone"]
+}
